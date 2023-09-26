@@ -1,0 +1,63 @@
+/* styles.css */
+
+/* Basic styling for body */
+body {
+   font-family: Arial, sans-serif;
+   margin: 20px;
+   padding: 0;
+   background-color: #f0f0f0;
+}
+
+/* Header styling */
+header {
+   background-color: #66b3cc; /* Light blue background color */
+   color: white;
+   padding: 20px;
+   text-align: center;
+}
+
+/* Button container styling */
+.button-container {
+   text-align: center;
+   margin-top: 20px;
+}
+
+.action-button {
+   text-decoration: none; /* Remove underlines */
+   padding: 10px 20px; /* Add padding for better button appearance */
+   border: 2px solid #4a90e2; /* Add an outline with a slightly darker shade of light blue */
+   color: #4a90e2; /* Use the same color for button text */
+   background-color: white; /* Set the background color for the buttons */
+   transition: background-color 0.3s ease, color 0.3s ease; /* Add a transition effect */
+}
+
+.action-button:hover {
+   background-color: #4a90e2; /* Change background color on hover */
+   color: white; /* Change text color on hover */
+}
+h1 {
+   padding: 10px;
+}
+
+form {
+   margin-top: 20px;
+}
+
+label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+select, button {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+}
+
+#prediction-results {
+   margin-top: 20px;
+}
+
+.back-button {
+   margin-top: 20px;
+}

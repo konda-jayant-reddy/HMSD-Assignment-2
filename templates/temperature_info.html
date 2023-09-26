@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>River Water Temperature Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>River Water Temperature Prediction</h1>
+    </header>
+
+    <form action="/perform_prediction" method="post">
+        <label for="input-data">Select Input Data (Air Temperature):</label>
+        <select id="input-data" name="input-data">
+            <!-- Options for selecting input data -->
+            <option value="source_link_1">Source Link 1</option>
+            <option value="source_link_2">Source Link 2</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="observed-data">Select Observed Data (River Water Temperature):</label>
+        <select id="observed-data" name="observed-data">
+            <!-- Options for selecting observed data -->
+            <option value="source_link_3">Source Link 3</option>
+            <option value="source_link_4">Source Link 4</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="ml-models">Select Machine Learning Models:</label>
+        <select id="ml-models" name="ml-models">
+            <!-- Options for selecting ML models -->
+            <option value="model_1">Model 1</option>
+            <option value="model_2">Model 2</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="performance-parameters">Select Performance Measuring Parameters:</label>
+        <select id="performance-parameters" name="performance-parameters">
+            <!-- Options for selecting performance parameters -->
+            <option value="rmse">Root Mean Squared Error (RMSE)</option>
+            <option value="mae">Mean Absolute Error (MAE)</option>
+            <option value="mse">Mean Squared Error (MSE)</option>
+        </select>
+
+        <button type="submit" class="action-button">Submit</button>
+    </form>
+
+    <div id="prediction-results">
+        <!-- Prediction results will be displayed here -->
+    </div>
+
+    <div class="back-button">
+        <a href="/" class="action-button">Back to Home</a>
+    </div>
+</body>
+</html>
