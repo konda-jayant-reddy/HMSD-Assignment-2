@@ -1,0 +1,46 @@
+<div >
+  <h1 >
+    Results
+  </h1>
+
+  <h3 >
+    Predicition
+  </h3>
+  <div >
+    Input data: {{ input_data }}<br />
+    Observed data: {{ observed_data }}<br />
+    Model: {{ model }}<br />
+    Metric: {{ metric }}<br />
+  </div>
+
+  <div>
+    Train Set Error: {{ train_error }}<br />
+    Test Set Error: {{ test_error }}<br />
+  </div>
+
+  <h3 >
+    Output File
+  </h3>
+  <div >
+    <a href="/static/predicted_wt_monthly.csv" target="_blank">
+      <button type="button" class="my-2">
+        Download
+      </button>
+    </a>
+  </div>
+
+  <h3>
+    Plots
+  </h3>
+  <div >
+    <div>
+      Predicted RWT timeseries
+    </div>
+    <img src="/static/RWT_AT_timeseries.png" alt="Predicted RWT timeseries"  />
+    <br><br>
+    <div>
+      Regression Plot: Air Temperature vs River Water Temperature (Monthly)
+    </div>
+    <img src="/static/RWT_AT.png" alt="Regression Plot: Air Temperature vs River Water Temperature (Monthly)" class="w-full" />
+  </div>
+</div>

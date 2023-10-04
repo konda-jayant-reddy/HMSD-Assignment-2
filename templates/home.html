@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block content %}
+<!--Left Col-->
+<div
+  class="flex flex-col w-full  justify-center lg:items-start g:items-start overflow-y-hidden slide-in-bottom">
+  <h1>
+    River Water Quality Prediction Tool
+  </h1>
+
+  <div class="pt-6 mx-4">
+    <a href="/rwt">
+      <div class="btn-wrapper"><button type="button" class="my-2">
+        <img src="/static/water_drop.svg" alt="Water Drop Icon" class="mr-2" /> River Water Temperature
+      </button></div>
+    </a>
+
+    <a href="/do">
+      <div class="btn-wrapper"><button type="button" class="my-2">
+        <img src="/static/oxygen_molecule.svg" alt="Oxygen Molecule Icon" class="mr-2" /> Saturated Dissolved Oxygen
+      </button></div>
+    </a>
+  </div>
+</div>
+</div>
+
+
+{% endblock content %}
+
+<style>
+    .cta-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .cta-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    margin-right: 15px;
+}
+
+</style>

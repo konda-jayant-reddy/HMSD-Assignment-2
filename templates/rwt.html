@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block content %}
+<div>
+  <h1 >
+    River Water Temperature
+  </h1>
+
+
+
+  <form hx-post="/results/rwt?redirect={{ redirect }}" hx-ext="json-enc" hx-target="#rwt-results"
+    hx-indicator="#rwt-loading">
+    <div >
+      <select id="input-data" name="input-data">
+        <option value="null" selected>Choose input data</option>
+        <option value="air-temperature">Air Temperature</option>
+      </select>
+
+      <select id="observed-data" name="observed-data">
+        <option value="null" selected>Choose observed data</option>
+        <option value="river-water-temperature">River Water Temperature</option>
+      </select>
+    </div>
+
+    <div>
+      <select id="model" name="model">
+        <option value="null" selected>Choose ML model</option>
+        <option value="0">Linear Regression</option>
+        <option value="1">Decision Tree Regression</option>
+        <option value="2">Random Forest Regression</option>
+      </select>
+
+      <select id="metric" name="metric">
+        <option value="null" selected>Choose performance metric</option>
+        <option value="0">Root Mean Square Error</option>
+        <option value="1">Mean Absolute Error</option>
+        <option value="2">Mean Square Error</option>
+      </select>
+    </div>
+
+    <div>
+      <div class="btn-wrapper"><button type="submit" class="my-2">
+        Submit
+      </button></div>
+    </div>
+  </form>
+
+  <div id="rwt-results"></div>
+</div>
+{% endblock content %}

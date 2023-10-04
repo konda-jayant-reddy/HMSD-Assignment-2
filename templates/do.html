@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %}
+<div>
+  <h1>
+    Saturated Dissolved Oxygen
+  </h1>
+
+  <div>
+    <form hx-post="/results/do" hx-swap="none" hx-indicator="#do-loading" hx-encoding="multipart/form-data">
+      <div class="btn-wrapper"><button type="submit" class="my-2">
+        Select Data
+      </button></div>
+      <input required="true" name="file"  id="file_input" type="file">
+    </form>
+
+    <div class="pt-2">
+      <a href="/rwt?redirect=True">
+        <div class="btn-wrapper"><button type="button" class="my-2">
+          Simulate Data
+        </button></div>
+      </a>
+    </div>
+  </div>
+
+  {% if output_file_path %}
+  {% include "partial/do_results.html" %}
+  {% endif %}
+</div>
+{% endblock content %}
