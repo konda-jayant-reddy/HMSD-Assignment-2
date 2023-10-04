@@ -7,9 +7,6 @@ This repository contains the source code and documentation for HMSD-Assignment2 
 ## Table of Contents
 
 - [Running Locally](#running-locally)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Running Locally
 
